@@ -51,7 +51,11 @@
 	position: relative;
 	left: 0;
 	top: 0;
+<<<<<<< HEAD
 	display: block;
+=======
+	display: block;
+>>>>>>> 4a2547e7c5dcbd777e2304d34488dab65d7a51df
 	overflow-x: hidden !important;
 }
 
@@ -246,7 +250,11 @@
 			.slick-dots li button:before {
 				position: absolute;
 				top: 0;
+<<<<<<< HEAD
 				left: 0;
+=======
+				left: 0;
+>>>>>>> 4a2547e7c5dcbd777e2304d34488dab65d7a51df
 				content: url("/img/krujok20.png");/*"•";*/
 				width: 20px;
 				height: 20px;

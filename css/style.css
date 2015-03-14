@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
  background-color: white;
     margin: 0 auto;
@@ -100,4 +101,112 @@ ul.first-level-menu li.menu-item-top {
  background: -o-linear-gradient(135deg, rgba(255,183,41,1),,rgba(255,215,95,1));
  background: -moz-linear-gradient(135deg, rgba(255,183,41,1), rgba(255,215,95,1));
  background: linear-gradient(135deg, rgba(255,183,41,1), rgba(255,215,95,1));
+=======
+body {
+	background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    width: 900px;
+    font-family: Ubuntu, sans-serif;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.cosials {
+}
+
+.cosials >img {
+    display: inline;
+}
+
+header {
+    
+}
+
+    header .first-level-menu {
+        
+    }
+
+    header .title-inline {
+        display: inline;
+    }
+
+    header .title {
+        display: block;
+        height: 140px;
+    }
+
+        header .title h1{
+            font-family: Ubuntu, sans-serif;
+            font-size: 30pt;
+            margin-bottom: 0;
+        }
+
+        header .title h4{
+            font-family: Ubuntu, sans-serif;
+            font-weight: 100;
+            margin-top: 0;
+        }
+
+.wrapper {
+	background: black;
+	width: 900px;
+    height: 78px;
+	/*padding: 5px 20px 15px;*/
+}
+
+ul.first-level-menu {
+	list-style-type: none;
+    color: white;
+	padding: 0;
+}
+
+ul.second-level-menu { 
+	position: absolute;
+	left: -9999px;
+}
+
+ul.first-level-menu li.menu-item-top {
+	display: inline;
+	float: left;
+	padding: 30px 30px;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+.settings_logo {
+ width: 36px;
+ height: 36px;
+}
+.settings_logo_part {
+ display:inline; 
+ float:left;
+ width:18px;
+ height:18px;
+}
+.settings_logo_part_1 {
+ background: -webkit-linear-gradient(135deg, rgba(247,164,12,1), rgba(251,204,45,1));
+ background: -o-linear-gradient(135deg, rgba(247,164,12,1), rgba(251,204,45,1));
+ background: -moz-linear-gradient(135deg, rgba(247,164,12,1), rgba(251,204,45,1));
+ background: linear-gradient(135deg, rgba(247,164,12,1), rgba(251,204,45,1)); 
+}
+.settings_logo_part_2 {
+ background: -webkit-linear-gradient(135deg, rgba(233,148,0,1), rgba(244,193,0,1));
+ background: -o-linear-gradient(135deg, rgba(233,148,0,1), rgba(233,148,0,1));
+ background: -moz-linear-gradient(135deg, rgba(233,148,0,1), rgba(233,148,0,1));
+ background: linear-gradient(135deg, rgba(233,148,0,1), rgba(233,148,0,1));
+}
+.settings_logo_part_3 {
+}
+.settings_logo_part_4 {
+>>>>>>> 4a2547e7c5dcbd777e2304d34488dab65d7a51df
 }
