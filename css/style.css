@@ -1,0 +1,103 @@
+body {
+ background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    width: 900px;
+    font-family: Ubuntu, sans-serif;
+}
+
+.right {
+ float: right;
+}
+
+.left {
+ float: left;
+}
+
+.cosials {
+}
+
+.cosials >img {
+    display: inline;
+}
+
+header {
+    
+}
+
+    header .first-level-menu {
+        
+    }
+
+    header .title {
+        display: block;
+        height: 140px;
+    }
+
+        header .title h1{
+            font-family: Ubuntu, sans-serif;
+            font-size: 30pt;
+        }
+
+.wrapper {
+ background: black;
+ width: 900px;
+ padding: 5px 20px 15px;
+}
+
+ul.first-level-menu {
+ list-style-type: none;
+    color: white;
+ padding: 0;
+}
+
+ul.second-level-menu { 
+ position: absolute;
+ left: -9999px;
+}
+
+ul.first-level-menu li.menu-item-top {
+ display: inline;
+ float: left;
+ margin: 5px 10px; 
+}
+
+.settings_logo {
+ width: 36px;
+ height: 36px;
+}
+.settings_logo img {
+	position:absolute;
+	float:left;
+	margin-left: -18px;
+}
+.settings_logo_part {
+ display:inline; 
+ float:left;
+ width:18px;
+ height:18px;
+}
+.settings_logo_part_1 {
+ background: -webkit-linear-gradient(135deg, rgba(247,164,12,1), rgba(251,204,45,1));
+ background: -o-linear-gradient(135deg, rgba(247,164,12,1), rgba(251,204,45,1));
+ background: -moz-linear-gradient(135deg, rgba(247,164,12,1), rgba(251,204,45,1));
+ background: linear-gradient(135deg, rgba(247,164,12,1), rgba(251,204,45,1)); 
+}
+.settings_logo_part_2 {
+ background: -webkit-linear-gradient( rgba(233,148,0,1), rgba(244,193,0,1));
+ background: -o-linear-gradient( rgba(233,148,0,1), rgba(244,193,0,1));
+ background: -moz-linear-gradient( rgba(233,148,0,1), rgba(244,193,0,1));
+ background: linear-gradient( rgba(233,148,0,1), rgba(244,193,0,1));
+}
+.settings_logo_part_3 {
+ background: -webkit-linear-gradient(135deg, rgba(255,195,67,1), rgba(255,223,125,1) );
+ background: -o-linear-gradient(135deg, rgba(255,195,67,1),,rgba(255,223,125,1));
+ background: -moz-linear-gradient(135deg, rgba(255,195,67,1), rgba(255,223,125,1));
+ background: linear-gradient(135deg, rgba(255,195,67,1), rgba(255,223,125,1));
+}
+.settings_logo_part_4 {
+ background: -webkit-linear-gradient(135deg, rgba(255,183,41,1), rgba(255,215,95,1) );
+ background: -o-linear-gradient(135deg, rgba(255,183,41,1),,rgba(255,215,95,1));
+ background: -moz-linear-gradient(135deg, rgba(255,183,41,1), rgba(255,215,95,1));
+ background: linear-gradient(135deg, rgba(255,183,41,1), rgba(255,215,95,1));
+}
