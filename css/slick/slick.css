@@ -1,8 +1,8 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 /* Slider */
 .slick-slider {
 	position: relative;
-	margin-top: -35px;
+	margin-top: 25px;
 	display: block;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
