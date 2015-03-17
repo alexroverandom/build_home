@@ -291,15 +291,57 @@ ul.second-level-menu a {
     margin-left: -50%;
     z-index: 1;
     text-align: center;
-    display: inline-table;
+    vertical-align: middle;
 }
 
-.services servise-item {
+.services .service-item {
     display: table-cell;
     z-index: 5;
     width: 260px;
+    padding: 20px;
 }
 
+.service-wrapper {
+    display: inline-table;
+    width: 1000px;
+    height: 400px;
+    vertical-align: center;
+    margin-top: 85px;
+}
+
+.services h1 {
+    position: absolute;
+    left: 15%;
+    color: white;
+    font-weight: 600;
+}
+
+.service-item img {
+    margin-bottom: 30px;
+    opacity: 1;
+}
+
+.effect-to-open {
+    width: 260px;
+    height: 260px;
+    margin-top: -300px;
+    color: dodgerblue;
+    opacity: 0.5;
+    text-align: center;
+    vertical-align: middle;
+    z-index : 2;
+}
+
+.effect-to-open h1 {
+    font-size: 60pt;
+    color: white;
+    margin-top: 60px;
+    font-weight: 100;
+}
+
+.service-item img:hover {
+    opacity: 0.5;
+}
 
 
 
