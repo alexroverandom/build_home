@@ -16,6 +16,7 @@ a {
 
 a: hover {
     color: #ddbb33;
+    cursor: pointer;
 }
 
 .right {
@@ -342,6 +343,78 @@ ul.second-level-menu a {
 .service-item img:hover {
     opacity: 0.5;
 }
+
+.service-item img:hover .service-item > a {
+    color: yellow;
+}
+
+.news {
+    width: 560px;
+}
+
+.banners {
+    width: 560px;
+    padding: 40px;
+}
+
+.banners h1 {
+    padding: 10px;
+}
+
+.panel {
+    width: 520px;
+    padding: 3px;
+}
+
+.item-title {
+    width: 516px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.accordeon-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 2px solid lightgray;
+    font-size: 14pt;
+    font-family: sans-serif;
+    font-weight: 100;
+    line-height: 2;
+    cursor: pointer; 
+}
+
+.accordeon-title {
+    display: inline-block;
+    /*width: 505px;*/
+    padding-left: 10px;
+}
+
+.description {
+    padding: 10px;
+    margin: 20px 5px 20px 30px;
+    color: darkgrey;
+    font-size: 10pt;
+    line-height: 1.7;
+}
+
+.panel.active .item-title {
+    background-color: orange;
+    border: 0;
+    color: white;
+}
+
+.panel.active .accordeon-btn {
+    border-right: 1px solid white;
+    color: white;
+}
+
+
+
+
 
 
 
