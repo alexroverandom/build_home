@@ -411,6 +411,20 @@ ul.second-level-menu a {
     border-right: 1px solid white;
     color: white;
 }
+.brands {
+	display:inline-block;
+	width:1182px;
+	height:240px;
+}
+.brands_logo {
+	width:143px;
+	height:62px;
+	display:inline;
+	float:left;
+	margin-top:89px;
+	margin-bottom:89px;
+	margin-right:54px;
+}
 
 
 
