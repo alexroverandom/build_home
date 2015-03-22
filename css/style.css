@@ -1,5 +1,5 @@
 body {
-	background-color: white;
+    background-color: white;
     margin: 0 auto;
     padding: 0;
     padding-top: 20px;
@@ -20,11 +20,11 @@ a: hover {
 }
 
 .right {
-	float: right;
+    float: right;
 }
 
 .left {
-	float: left;
+    float: left;
     display: inline-table;
 }
 
@@ -70,18 +70,20 @@ header {
             margin: 0;
             z-index: 33;
             margin-top: -40px;
-            margin-left: 40px;
+            margin-left: 50px;
+            letter-spacing: 4px;
         }
 
         header .title h4{
             font-family: Ubuntu, sans-serif;
             font-weight: 100;
             font-size: 10pt;
-            color: #202020;
+            color: darkgray;
             margin: 0;
-            margin-left: 40px;
+            margin-left: 50px;
             margin-top: -3px;
             z-index: 33;
+            letter-spacing: 4px;
         }
 
 .settings_logo {
@@ -90,9 +92,9 @@ header {
     margin-top: 25px;
 }
 .settings_logo img {
-	position:absolute;
-	float:left;
-	margin-left: -18px;
+    position:absolute;
+    float:left;
+    margin-left: -18px;
     z-index: 1;
 }
 .settings_logo_part {
@@ -127,17 +129,17 @@ header {
 }
 
 .wrapper {
-	background: #202020;
-	width: 1160px;
+    background: #202020;
+    width: 1160px;
     height: 60px;
-	/*padding: 5px 20px 15px;*/
+    /*padding: 5px 20px 15px;*/
 }
 
 ul.first-level-menu,
 ul.second-level-menu{
-	list-style-type: none;
+    list-style-type: none;
     color: white;
-	padding: 0;
+    padding: 0;
 }
 
 ul.first-level-menu li { 
@@ -148,9 +150,9 @@ ul.first-level-menu li {
 
 
 ul.first-level-menu li.menu-item-top {
-	display: inline;
-	float: left;
-	padding: 19px 15px 0px 15px;
+    display: inline;
+    float: left;
+    padding: 19px 15px 0px 15px;
     background-color: #202020;
 }
 
@@ -159,8 +161,8 @@ ul.first-level-menu li.menu-item-top.active-item {
 }
 
 ul.first-level-menu li.menu-item-top a {
-	padding: 3px 20px 23px;
-	display: block;
+    padding: 3px 20px 23px;
+    display: block;
     font-size: 10pt;
 }
 
@@ -169,8 +171,8 @@ ul.first-level-menu li.menu-item-top:hover {
 }
 
 ul.first-level-menu li.menu-item-top:hover .second-level-menu {
-	display: block;
-	left: 0;
+    display: block;
+    left: 0;
 }
 
 ul.first-level-menu li.menu-item-top a:hover {
@@ -187,8 +189,8 @@ ul.first-level-menu li.menu-item-top li:hover {
 }
 
 ul.second-level-menu { 
-	position: absolute;
-	left: -9999px;
+    position: absolute;
+    left: -9999px;
 }
 
 ul.second-level-menu li { 
@@ -259,7 +261,7 @@ ul.second-level-menu a {
     display: inline-table;
 }
 
-.feature-item h1 {
+.feature-item h2 {
     display: table-cell;
     Font-size: 68pt;
     color: #EEEEEE;
@@ -319,7 +321,7 @@ ul.second-level-menu a {
     margin-top: 85px;
 }
 
-.services h1 {
+.services h2 {
     position: relative;
     float: left;
     margin-left: 25%;
@@ -344,7 +346,7 @@ ul.second-level-menu a {
     z-index : 2;
 }
 
-.effect-to-open h1 {
+.effect-to-open h2 {
     font-size: 60pt;
     color: white;
     margin-top: 60px;
@@ -364,26 +366,26 @@ ul.second-level-menu a {
     width: 200%;
     margin-left: -50%;
     z-index: 0;
-    height: 650px;
+    height: 600px;
     top: 1200px;
 }
 
 .news {
-    margin-top: -650px;
+    margin-top: -600px;
     width: 560px;
     padding-top: 40px; 
     padding-bottom: 40px;
 }
 
 .banners {
-    margin-top: -650px;
+    margin-top: -600px;
     width: 560px;
     padding: 40px;
     padding-left: 10px;
     padding-right: 0;
 }
 
-.banners h1 {
+.banners h2 {
     padding: 10px;
 }
 
@@ -438,18 +440,18 @@ ul.second-level-menu a {
     color: white;
 }
 .brands {
-	display:inline-block;
-	width:1182px;
-	height:240px;
+    display:inline-block;
+    width:1182px;
+    height:240px;
 }
 .brands_logo {
-	width:143px;
-	height:62px;
-	display:inline;
-	float:left;
-	margin-top:89px;
-	margin-bottom:89px;
-	margin-right:54px;
+    width:143px;
+    height:62px;
+    display:inline;
+    float:left;
+    margin-top:89px;
+    margin-bottom:89px;
+    margin-right:54px;
 }
 
 .news h2 {
@@ -527,34 +529,79 @@ ul.second-level-menu a {
     color: black;
 }
 .copyrights {
-	background-color:rgb(53,56,60);
-	width:200%;
-	margin-left:-50%;
-	text-align:center;
-	font-family:Arial, Helvetica, sans-serif;
-	color:rgb(134,135,137);
-	font-size:12px;
-	height: 60px;
+    background-color:rgb(53,56,60);
+    width:200%;
+    margin-left:-50%;
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(134,135,137);
+    font-size:12px;
+    height: 60px;
 }
 .copyrights_element {
-	height:16px;
-	display:inline-block;
-	padding-top: 24px;
+    height:16px;
+    display:inline-block;
+    padding-top: 24px;
 }
 .copyrights_icon_left {
-	padding-right:10px;
-	display:inline;
+    padding-right:10px;
+    display:inline;
 }
 .copyrights_text_left {
-	height:16px;	
-	padding-right:20px;
-	display:inline;
+    height:16px;    
+    padding-right:20px;
+    display:inline;
 }
 .copyrights_right {
-	display:inline-block;
-	margin-left:77%;
-	height:16px;
+    display:inline-block;
+    margin-left:77%;
+    height:16px;
 }
 
+.pre-footer {
+    height: 350px;
+    background-color: #404040;
+    width: 200%;
+    margin-left: -50%;
+    margin-top: -100px;
+    z-index: 1;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pre-footer-wrapper {
+    position: relative;
+    margin-left: 25%;
+    width: 1160px;
+    height: 350px;
+    vertical-align: center;
+    margin-top: 85px;
+}
+
+.pre-footer-wrapper hr {
+    border-color: #808080;
+}
+
+.pre-footer-item {
+    display: inline-block;
+    width: 240px;
+    margin: 20px;
+    text-align: left;
+}
+
+.pre-footer-item h4 {
+    color: white;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.pre-footer-item a {
+    font-size: 9pt;
+    color: darkgrey;
+}
+
+.pre-footer-item a:hover {
+    color: dodgerblue;
+}
 
 
