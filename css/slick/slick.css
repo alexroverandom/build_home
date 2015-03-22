@@ -206,7 +206,7 @@
 
 .slick-dots {
 	position: absolute;
-	margin-left: 340px;
+	margin-left: 0px;
 	bottom: 0px;
 	list-style: none;
 	display: block;
@@ -250,12 +250,8 @@
 			.slick-dots li button:before {
 				position: absolute;
 				top: 0;
-<<<<<<< HEAD
 				left: 0;
-=======
-				left: 0;
->>>>>>> 4a2547e7c5dcbd777e2304d34488dab65d7a51df
-				content: url("/img/krujok20.png");/*"•";*/
+				content: url(../../imgs/pip.png);/*"•";*/
 				width: 20px;
 				height: 20px;
 				font-family: "slick";
