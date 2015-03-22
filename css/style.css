@@ -539,6 +539,7 @@ ul.second-level-menu a {
 .copyrights_element {
 	height:16px;
 	display:inline-block;
+	padding-top: 24px;
 }
 .copyrights_icon_left {
 	padding-right:10px;
@@ -546,12 +547,12 @@ ul.second-level-menu a {
 }
 .copyrights_text_left {
 	height:16px;	
-	padding-right:10px;
+	padding-right:20px;
 	display:inline;
 }
 .copyrights_right {
-	display:inline;
-	margin-left:50%;
+	display:inline-block;
+	margin-left:77%;
 	height:16px;
 }
 
