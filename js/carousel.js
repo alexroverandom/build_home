@@ -10,18 +10,20 @@ var Carousel = function () {
 		autoplaySpeed: 2000
 	});
     
-    $(".jServiceItem").on("mouseenter", "a", function(){
-        $(this).parent().find("a").css({
+    $(".jServiceItem").on("mouseenter", function(){
+        $(this).next().find("a").css({
             "color": "yellow",
             "cursor": "pointer"
         });
+        $(this).find(".jEffect").css("display", "block");
     });
     
-    $(".jServiceItem").on("mouseout", "a", function(){
-        $(this).parent().find("a").css({
+    $(".jServiceItem").on("mouseleave", function(){
+        $(this).next().find("a").css({
             "color": "white",
-            "cursor": "auto"
+            "cursor": "pointer"
         });
+        $(this).find(".jEffect").css("display", "none");
     });
     
     $(".jDescription").hide();
@@ -40,5 +42,13 @@ var Carousel = function () {
             $(this).html("+");
             $(this).parent().next().slideUp();
         }
+    });
+
+    $(".service-link").on("mouseenter", function(e){
+        $(this).find("a").css("color", "yellow");
+    });
+
+    $(".service-link").on("mouseleave", function(e){
+        $(this).find("a").css("color", "white");
     });
 };

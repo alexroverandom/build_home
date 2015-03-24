@@ -5,7 +5,7 @@ body {
     padding-top: 20px;
     width: 1160px;
     font-family: Ubuntu, sans-serif;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 a {
@@ -32,11 +32,25 @@ a: hover {
     color: yellow;
 }
 
-.cosials {
+.socials {
+    margin-top: 25px;
 }
 
-.cosials >img {
+.socials >img {
     display: inline;
+    padding: 5px;
+    color: yellow;
+}
+
+.socials-svg {
+    width: 16px;
+    height: 16px;
+    fill: darkgrey;
+    margin: 5px;
+}
+
+.socials-svg:hover {
+    fill: dodgerblue;
 }
 
 header {
@@ -328,36 +342,46 @@ ul.second-level-menu a {
     color: white;
     font-weight: 600;
     padding: 20px;
+    padding-bottom: 5px;
 }
 
-.service-item img {
-    margin-bottom: 30px;
-    opacity: 1;
+.service-item .service-link {
+    margin-top: 30px;
+}
+
+.service-item .service-img {
+    width: 260px;
+    height: 260px;
+}
+
+.service-item .service-img:hover {
+    cursor: pointer;
 }
 
 .effect-to-open {
     width: 260px;
     height: 260px;
-    margin-top: -300px;
-    color: dodgerblue;
-    opacity: 0.5;
+    margin-top: -263px;
+    background-color: dodgerblue;
+    opacity: 0.7;
     text-align: center;
     vertical-align: middle;
-    z-index : 2;
+    z-index : 7;
+    display: none;
 }
 
-.effect-to-open h2 {
+.effect-to-open span {
     font-size: 60pt;
     color: white;
     margin-top: 60px;
     font-weight: 100;
+    line-height: 260px;
+    color: white;
+    opacity: 1;
 }
 
-.service-item img:hover {
-    opacity: 0.5;
-}
-
-.service-item img:hover .service-item > a {
+.service-link a:hover {
+    cursor: pointer;
     color: yellow;
 }
 
@@ -366,19 +390,19 @@ ul.second-level-menu a {
     width: 200%;
     margin-left: -50%;
     z-index: 0;
-    height: 600px;
+    height: 650px;
     top: 1200px;
 }
 
 .news {
-    margin-top: -600px;
+    margin-top: -650px;
     width: 560px;
     padding-top: 40px; 
     padding-bottom: 40px;
 }
 
 .banners {
-    margin-top: -600px;
+    margin-top: -650px;
     width: 560px;
     padding: 40px;
     padding-left: 10px;
@@ -468,6 +492,14 @@ ul.second-level-menu a {
     display: table-cell;
 }
 
+.news-image a {
+    cursor: pointer;
+}
+
+.news-image img:hover {
+    opacity: 0.8;
+}
+
 .news-body {
     width: 350px;
     display: table-cell;
@@ -532,11 +564,16 @@ ul.second-level-menu a {
     background-color:rgb(53,56,60);
     width:200%;
     margin-left:-50%;
-    text-align:center;
+    text-align: center;
     font-family:Arial, Helvetica, sans-serif;
     color:rgb(134,135,137);
     font-size:12px;
     height: 60px;
+}
+
+.copyrights img:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 .copyrights_element {
     height:16px;
