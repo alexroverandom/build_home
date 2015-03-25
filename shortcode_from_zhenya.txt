@@ -1,0 +1,43 @@
+function latest_news_shortcode ($atts, $content = null)  уточнить насчет контента
+    {
+        extract (shortcode_atts (array (		extract извлекает ключи массива в одноименные переменные (должна так делать, не проверяла)
+                    'qty'  = '2', 
+                    'order_by' =  'date',
+                    'order' = 'desc',
+                    'thumbnails_off' = 'false',
+                    'author_off' = 'false',
+                    'comments_off' = 'false',
+                    'excerpt_off' = 'false',
+                    ), $atts, 'latest_news'));
+
+        $the_query = new WP_Query('posts_per_page=2&order=DESC');
+        $qty = 2;
+			for ($x = 0; $x  $qty; $x++) 
+			{
+		        $the_query-the_post();    
+		            div class=news-item
+		                div class=news-image
+		                    a href=php next_image_link(); a
+		                    div class=news-date-block
+		                        div class=news-date monthphp the_time('M') div
+		                        div class=news-date dayphp the_time('d') div
+		                    divdivdiv class=news-bodya href=h4php the_title(); h4a
+		                    span class=authorby a href=php the_author();aspan
+		                    span class=commentscomments (a href=php comments_number();a)spanp
+		                    php 						 wp_trim_words для вывод контента до 30 слов, как на мокапе, использовала параметр excerpt_off при вызове шорткода
+							if ($excerpt_off==true)		но проверка не работает, всегда выводит полный контент (
+							{the_content();} 
+							else
+							$trimmed = wp_trim_words (the_content(), 30);
+							echo $trimmed;
+						
+							pdivdivdivphp  
+							echo $excerpt_off;			для дебага. показывает что при вызове шорткода с параметрами переменные меняют свое значение (если вызывать [latest_news qty=2 order_by=title order=asc thumbnails_off=false author_off=false comments_off=false excerpt_off=false]) 
+							echo $comments_off;
+							echo $thumbnails_off;
+			}
+			wp_reset_postdata();
+    }
+  
+    
+add_shortcode('latest_news', 'latest_news_shortcode');

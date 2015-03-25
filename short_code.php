@@ -1,3 +1,4 @@
+<? php 
 function latest_news_shortcode ($atts, $content = null) // уточнить насчет контента
     {
         $a = shortcode_atts (array (
@@ -12,10 +13,7 @@ function latest_news_shortcode ($atts, $content = null) // уточнить на
 
         $the_query = new WP_Query('posts_per_page=2&order=ASC');
         $qty = 2;
-		//$y = $the_query->$post_count();
-		//if ($y>0 ) 
-		//{
-			for ($x = 0; $x < $qty; $x++) // убрать теги h2 если не нужны
+			for ($x = 0; $x < $qty; $x++) 
 			{
 		        $the_query->the_post();  ?>  
 		            <div class="news-item">
@@ -30,7 +28,6 @@ function latest_news_shortcode ($atts, $content = null) // уточнить на
 		                    <?php the_content(); ?></p></div></div><div><?php
 			}
 			wp_reset_postdata();
-		//}              		//проверить нормально если кол-во меньше чем qty в параметрах
     }
   
     
