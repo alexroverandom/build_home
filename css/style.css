@@ -275,7 +275,7 @@ ul.second-level-menu a {
     display: inline-table;
 }
 
-.feature-item h2 {
+.feature-item span {
     display: table-cell;
     Font-size: 68pt;
     color: #EEEEEE;
