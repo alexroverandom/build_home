@@ -376,107 +376,61 @@ require get_template_directory() . '/inc/customizer.php';
 
 <?php 
 
-function latest_news_shortcode ($atts, $content = null) // уточнить насчет контента
+function echo_first_image( $postID ) {
+	$args = array(
+		'numberposts' => 1,
+		'order' => 'ASC',
+		'post_mime_type' => 'image',
+		'post_parent' => $postID,
+		'post_status' => null,
+		'post_type' => 'attachment',
+	);
+
+	$attachments = get_children( $args );
+
+	if ( $attachments ) {
+		foreach ( $attachments as $attachment ) {
+			$image_attributes = wp_get_attachment_image_src( $attachment->ID, 'thumbnail' )  ? wp_get_attachment_image_src( $attachment->ID, 'thumbnail' ) : wp_get_attachment_image_src( $attachment->ID, 'full' );
+
+			echo '<img src="' . wp_get_attachment_thumb_url( $attachment->ID ) . '" class="current">';
+		}
+	}
+}
+
+function latest_news_shortcode ($atts, $content = null)
     {
-       // $a =
-        extract(shortcode_atts (array (
-                    'qty'  => '2', 
+        $atts = shortcode_atts (array (
+                    'qty'  => '2', //extract
                     'order_by' =>  'date',
-                    'order' => 'desc',
+                    'order' => 'DESC',
                     'thumbnails_off' => 'false',
                     'author_off' => 'false',
                     'comments_off' => 'false',
                     'excerpt_off' => 'false',
-                    ), $atts));
-
-        $the_query = new WP_Query('posts_per_page=2&order=DESC');
-        //$qty = $a['qty'];
-        //$excerpt_off = $a['excerpt_off'];
-
-			for ($x = 0; $x < $qty; $x++) // убрать теги h2 если не нужны
+                    ), $atts);
+        $the_query = new WP_Query($atts);//posts_per_page=2&order=DESC
+			for ($x = 0; $x < $atts['qty']; $x++)
 			{
 		        $the_query->the_post();  ?>  
 		            <div class="news-item">
 		                <div class="news-image">
-		                    <a href="/"><?php get_the_post_thumbnail('thumbnail' );?></a>
+		                    <a href="/"><?php echo_first_image($the_query->post->ID) ?></a>
 		                    <div class="news-date-block">
 		                        <div class="news-date month"><?php the_time('M') ?></div>
 		                        <div class="news-date day"><?php the_time('d') ?></div>
 		                    </div></div><div class="news-body"><a href="/"><h4><?php the_title(); ?></h4></a>
 		                    <span class="author">by <a href="/"><?php the_author();?></a></span>
-		                    <span class="comments">comments (<a href="/"><?php comments_number();?></a>)</span><p>
+		                    <span class="comments">comments (<a href="/"><?php comments_number("0", "1", "%");?></a>)</span><p>
 		                    <?php
-		                    echo $excerpt_off;
-		                    	if ($excerpt_off==true)		
-								{
-									//the_content();
-									$trimmed = wp_trim_words (the_content(), 30);
-									echo $trimmed; 
-								} 
-								else {
-								$trimmed = wp_trim_words (the_content(), 30);
-								echo $trimmed; 
-								}
-
+		                    	$content = get_the_content();
+								$trimmed_content = wp_trim_words( $content, 30, null).".";
+								echo $trimmed_content;
 							?></p></div></div><div><?php
 			}
-							echo $excerpt_off;			
-							echo $comments_off;
-							echo $thumbnails_off;
 			wp_reset_postdata();
     }
   
     
 add_shortcode('latest_news', 'latest_news_shortcode');
-
-$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "full", false );
-$imgsrc = $imgsrc[0];
-$placeholderimg = wp_get_attachment_image( 2897, "full", false, array('data-original'=>$imgsrc) );
-
-/*function latest_news_shortcode ($atts, $content = null)  //уточнить насчет контента
-    {
-        extract (shortcode_atts (array (		//extract извлекает ключи массива в одноименные переменные (должна так делать, не проверяла)
-                    'qty'  = '2', 
-                    'order_by' =  'date',
-                    'order' = 'desc',
-                    'thumbnails_off' = 'false',
-                    'author_off' = 'false',
-                    'comments_off' = 'false',
-                    'excerpt_off' = 'false',
-                    ), $atts, 'latest_news'));
-
-        $the_query = new WP_Query('posts_per_page=2&order=DESC');
-        $qty = 2;
-			for ($x = 0; $x  $qty; $x++) 
-			{
-		        $the_query-the_post();    
-		            div class=news-item
-		                div class=news-image
-		                    a href=php next_image_link(); a
-		                    div class=news-date-block
-		                        div class=news-date monthphp the_time('M') div
-		                        div class=news-date dayphp the_time('d') div
-		                    divdivdiv class=news-bodya href=h4php the_title(); h4a
-		                    span class=authorby a href=php the_author();aspan
-		                    span class=commentscomments (a href=php comments_number();a)spanp
-		                    php 						//wp_trim_words для вывод контента до 30 слов, как на мокапе, использовала параметр excerpt_off при вызове шорткода
-							if ($excerpt_off==true)		//но проверка не работает, всегда выводит полный контент (
-							{the_content();} 
-							else
-							$trimmed = wp_trim_words (the_content(), 30);
-							echo $trimmed;
-						
-							pdivdivdivphp  
-							echo $excerpt_off;			для дебага. показывает что при вызове шорткода с параметрами переменные меняют свое значение (если вызывать [latest_news qty=2 order_by=title order=asc thumbnails_off=false author_off=false comments_off=false excerpt_off=false]) 
-							echo $comments_off;
-							echo $thumbnails_off;
-			}
-			wp_reset_postdata();
-    }
-  
-    
-add_shortcode('latest_news', 'latest_news_shortcode');
-
 
 ?>
-

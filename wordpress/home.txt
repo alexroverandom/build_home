@@ -1,0 +1,1 @@
+[latest_news qty="2" order_by="date" order="DESC" thumbnails_off="false" author_off="false" comments_off="false" excerpt_off="false"]

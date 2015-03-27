@@ -11,11 +11,17 @@ var Carousel = function () {
 	});
     
     $(".jServiceItem").on("mouseenter", function(){
+        var that = this;
         $(this).next().find("a").css({
             "color": "yellow",
             "cursor": "pointer"
         });
-        $(this).find(".jEffect").css("display", "block");
+        var height = $(that).find("img").height();
+        $(this).find(".jEffect").css({
+            "display": "block",
+            "height": height + 2,
+        });
+        $(this).find(".jEffect >span").css("line-height", height + "px");
     });
     
     $(".jServiceItem").on("mouseleave", function(){
@@ -51,4 +57,5 @@ var Carousel = function () {
     $(".service-link").on("mouseleave", function(e){
         $(this).find("a").css("color", "white");
     });
+
 };
