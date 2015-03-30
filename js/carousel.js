@@ -1,15 +1,24 @@
 var Carousel = function () {
-	$('.carousel').slick({
-		dots: true,
-		infinite: true,
-		speed: 500,
-		fade: true,
-		slide: 'div',
-		cssEase: 'linear',
-		autoplay: true,
-		autoplaySpeed: 2000
-	});
-    
+
+
+    changeElementHeight = function(el){
+        var width = $(window).width();
+        if (width < 1160) {
+            var height = 500 - parseInt(100 * (1160 / width));
+            $(el).css("height", height + 'px');
+        }
+    };
+
+   /* $('.carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        slide: 'img',
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 2000
+    });*/
     $(".jServiceItem").on("mouseenter", function(){
         var that = this;
         $(this).next().find("a").css({
@@ -58,4 +67,29 @@ var Carousel = function () {
         $(this).find("a").css("color", "white");
     });
 
+$(window).on("resize", function(){
+    changeElementHeight($(".jServices")[0]);
+});
+
+changeElementHeight($(".jServices")[0]);
+
+$(".jSocials img").on("mouseenter", function(e){
+    var src = $(e.currentTarget).attr('src').split('.png')[0];
+    var newSrc = src + "-edit.png";
+    $(e.currentTarget).attr('src', newSrc);
+});
+
+$(".jSocials img").on("mouseleave", function(e){
+    var src = $(e.currentTarget).attr('src').split('-edit.png')[0];
+    var newSrc = src + ".png";
+    $(e.currentTarget).attr('src', newSrc);
+});
+
+
+
+
+
+
+
+    
 };
