@@ -74,16 +74,17 @@ $(window).on("resize", function(){
         $(".jHelpSearch").hide();
         isHelpSearchShowed = false;
     } else{
-        if ($(window).width() > 620){
+        if ($(window).width() > 619){
             $(".jHelpSearch").hide();
             isHelpSearchShowed = false;
         }
-        if ($(window).width() > 479){
+        if ($(window).width() > 463){
             $(".jMenu").show();
             isMenuShowed = false;
         } else {
             isMenuShowed = false;
             $(".jMenu").hide();
+            $(".slider").css("margin-top", "60px");
             }
         }
         $(".jServices").css("height", '400px');
