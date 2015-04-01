@@ -240,12 +240,6 @@ ul.second-level-menu a {
     border: 1px solid black;
 }
 
-@media screen and (max-width: 900px){
-    .search-tb {
-        display: none;
-    }
-}
-
 .search-tb,
 .search-btn {
     background-color: #35383c;

@@ -1,6 +1,7 @@
 var Carousel = function () {
 
-
+var isHelpSearchShowed = false;
+var isMenuShowed = false;
     changeElementHeight = function(el){
         var width = $(window).width();
         if (width < 1160) {
@@ -68,10 +69,26 @@ var Carousel = function () {
     });
 
 $(window).on("resize", function(){
-    changeElementHeight($(".jServices")[0]);
-});
+    if ($(window).width() > 639){
+        changeElementHeight($(".jServices")[0]);
+        $(".jHelpSearch").hide();
+        isHelpSearchShowed = false;
+    } else{
+        if ($(window).width() > 620){
+            $(".jHelpSearch").hide();
+            isHelpSearchShowed = false;
+        }
+        if ($(window).width() > 479){
+            isMenuShowed = false;
+        } else {
 
-changeElementHeight($(".jServices")[0]);
+        }
+        $(".jServices").css("height", '400px');
+    }
+});
+if ($(window).width() > 639){
+    changeElementHeight($(".jServices")[0]);
+}
 
 $(".jSocials img").on("mouseenter", function(e){
     var src = $(e.currentTarget).attr('src').split('.png')[0];
@@ -83,6 +100,39 @@ $(".jSocials img").on("mouseleave", function(e){
     var src = $(e.currentTarget).attr('src').split('-edit.png')[0];
     var newSrc = src + ".png";
     $(e.currentTarget).attr('src', newSrc);
+});
+
+$(".jSearchBtn").on("click", function(e){
+    if($(window).width() < 620){
+        if (!isHelpSearchShowed){
+            $(".jHelpSearch").slideDown();
+            isHelpSearchShowed = true;
+        } else{
+            $(".jHelpSearch").slideUp();
+            isHelpSearchShowed = false;
+        }
+        
+    }
+});
+
+$(".jMenuBtn").on("click", function(e){
+    if ($(window).width() < 480){
+        if (!isMenuShowed){
+            $(".jMenu").slideDown();
+            isMenuShowed = true;
+        } else{
+            $(".jMenu").slideUp();
+            isMenuShowed = false;
+        }
+    }
+});
+
+$(".jMenuBtn img").on('mouseenter', function(e){
+    $(e.currentTarget).attr('src', 'imgs/mobile_menu_hovered.png');
+});
+
+$(".jMenuBtn img").on('mouseleave', function(e){
+    $(e.currentTarget).attr('src', 'imgs/mobile_menu.png');
 });
 
 
