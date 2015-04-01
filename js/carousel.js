@@ -10,7 +10,7 @@ var isMenuShowed = false;
         }
     };
 
-   /* $('.carousel').slick({
+    $('.carousel').slick({
         dots: true,
         infinite: true,
         speed: 500,
@@ -19,7 +19,7 @@ var isMenuShowed = false;
         cssEase: 'linear',
         autoplay: true,
         autoplaySpeed: 2000
-    });*/
+    });
     $(".jServiceItem").on("mouseenter", function(){
         var that = this;
         $(this).next().find("a").css({
@@ -79,13 +79,15 @@ $(window).on("resize", function(){
             isHelpSearchShowed = false;
         }
         if ($(window).width() > 479){
+            $(".jMenu").show();
             isMenuShowed = false;
         } else {
-
+            isMenuShowed = false;
+            $(".jMenu").hide();
+            }
         }
         $(".jServices").css("height", '400px');
-    }
-});
+    });
 if ($(window).width() > 639){
     changeElementHeight($(".jServices")[0]);
 }
@@ -103,7 +105,7 @@ $(".jSocials img").on("mouseleave", function(e){
 });
 
 $(".jSearchBtn").on("click", function(e){
-    if($(window).width() < 620){
+    if($(window).width() < 960 && $(window).width() > 479){
         if (!isHelpSearchShowed){
             $(".jHelpSearch").slideDown();
             isHelpSearchShowed = true;
@@ -118,9 +120,11 @@ $(".jSearchBtn").on("click", function(e){
 $(".jMenuBtn").on("click", function(e){
     if ($(window).width() < 480){
         if (!isMenuShowed){
+            $(".slider").css("margin-top", "280px");
             $(".jMenu").slideDown();
             isMenuShowed = true;
         } else{
+            $(".slider").css("margin-top", "60px");
             $(".jMenu").slideUp();
             isMenuShowed = false;
         }
